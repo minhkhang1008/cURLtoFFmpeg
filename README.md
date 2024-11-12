@@ -17,7 +17,7 @@
    
 <img width="559" alt="Ảnh màn hình 2024-11-12 lúc 23 41 11" src="https://github.com/user-attachments/assets/024d92fb-fa25-4a7c-b221-f7a4201f44ff">
 
-5. Go to my website, paste the cURL in, write your desired name and file extension (mp4/mov/mkv)
+5. Go to [this website](https://curltoffmpeg.vercel.app/), paste the cURL in, write your desired name and file extension (mp4/mov/mkv)
 6. Click Convert then copy command
 
 <img width="655" alt="Ảnh màn hình 2024-11-12 lúc 23 52 07" src="https://github.com/user-attachments/assets/6d2e7cc7-d67c-4b37-969b-463b6a7a36c1">
