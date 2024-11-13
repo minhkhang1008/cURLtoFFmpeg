@@ -124,8 +124,12 @@
                 return;
             }
 
-            // Generate ffmpeg command
-            const ffmpegCommand = `ffmpeg -headers 'User-Agent: ${userAgent}' -i '${m3u8Url}' -c copy '${fileName}.${fileFormat}'`;
+            // Generate ffmpeg command with retry and error resilience options
+            const ffmpegCommand = `
+ffmpeg -headers 'User-Agent: ${userAgent}' -i '${m3u8Url}' -c copy \\
+-reconnect 1 -reconnect_at_eof 1 -reconnect_streamed 1 -reconnect_delay_max 2 \\
+-err_detect ignore_err '${fileName}.${fileFormat}'
+            `.trim();
 
             // Display the ffmpeg command
             document.getElementById("ffmpegCommand").innerText = ffmpegCommand;
